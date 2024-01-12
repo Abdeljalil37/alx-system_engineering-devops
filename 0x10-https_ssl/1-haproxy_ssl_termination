@@ -39,8 +39,7 @@ frontend abde_frontend
     bind *:80
     bind *:443 ssl crt /etc/haproxy/certs/www.abde.tech.pem
     redirect scheme https code 301 if !{ ssl_fc }
-    http-request set-header X-Forwarded-Proto https
-    default_backend abde_backend
+    default_backend mybackend
 
 backend abde_backend
     balance roundrobin

@@ -2,6 +2,7 @@
 """ Queries the Reddit API and returns the number """
 import requests
 
+
 def top_ten(subreddit):
     """ Returns the number of subscribers for a given subreddit. """
     url = 'https://www.reddit.com/r/{}/hot/.json'.format(subreddit)
